@@ -26,4 +26,56 @@ class BookViewTest(APITestCase):
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]["title"], self.book.title)
 
-    
+    def test_retrieve_book_returns_book_details(self):
+        response = self.client.get(self.retrieve_url, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["isbn"], self.book.isbn)
+
+    def test_create_book_with_valid_data_persists_record(self):
+        payload = {
+            "title": "Clean Architecture",
+            "author": "Robert C. Martin",
+            "isbn": "9780134494166",
+            "published_date": "2017-09-10",
+        }
+
+        response = self.client.post(self.create_url, payload, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(Book.objects.count(), 2)
+        self.assertEqual(response.data["title"], payload["title"])
+
+    def test_create_book_with_invalid_data_returns_validation_errors(self):
+        payload = {
+            "title": "",
+            "author": "Robert C. Martin",
+            "isbn": "9780134494166",
+            "published_date": "2017-09-10",
+        }
+
+        response = self.client.post(self.create_url, payload, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("title", response.data)
+        self.assertEqual(Book.objects.count(), 1)
+
+    def test_update_book_modifies_existing_record(self):
+        payload = {
+            "title": "Django for Professionals",
+            "author": self.book.author,
+            "isbn": self.book.isbn,
+            "published_date": "2020-01-01",
+        }
+
+        response = self.client.put(self.update_url, payload, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.book.refresh_from_db()
+        self.assertEqual(self.book.title, payload["title"])
+
+    def test_delete_book_removes_existing_record(self):
+        response = self.client.delete(self.delete_url, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertFalse(Book.objects.filter(pk=self.book.pk).exists())
