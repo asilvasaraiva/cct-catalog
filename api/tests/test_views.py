@@ -79,3 +79,26 @@ class BookViewTest(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertFalse(Book.objects.filter(pk=self.book.pk).exists())
+
+    def test_retrieve_update_delete_missing_book_returns_404(self):
+        missing_id = self.book.id + 999
+        retrieve_url = reverse("api:books-retrieve", kwargs={"id": missing_id})
+        update_url = reverse("api:books-update", kwargs={"id": missing_id})
+        delete_url = reverse("api:books-delete", kwargs={"id": missing_id})
+
+        retrieve_response = self.client.get(retrieve_url, format="json")
+        update_response = self.client.put(
+            update_url,
+            {
+                "title": "Doesn't matter",
+                "author": "Doesn't matter",
+                "isbn": "9780000000000",
+                "published_date": "2020-01-01",
+            },
+            format="json",
+        )
+        delete_response = self.client.delete(delete_url, format="json")
+
+        self.assertEqual(retrieve_response.status_code, status.HTTP_404_NOT_FOUND)
+        self.assertEqual(update_response.status_code, status.HTTP_404_NOT_FOUND)
+        self.assertEqual(delete_response.status_code, status.HTTP_404_NOT_FOUND)
