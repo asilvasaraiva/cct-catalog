@@ -1,0 +1,32 @@
+replicaCount: 1
+image:
+  repository: ghcr.io/asilvasaraiva/cct-catalog
+  pullPolicy: Always
+  tag: "main"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+ingress:
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+loadSecretsFrom: books-database-postgresql
+environmentVariables:
+  - name: DATABASE_USER
+    value: books
+  - name: DATABASE_NAME
+    value: books
+  - name: DATABASE_HOST
+    value: books-database-postgresql-0.books-database-postgresql-hl.default.svc.cluster.local
+  - name: DEVELOPMENT_MODE
+    value: "false"
