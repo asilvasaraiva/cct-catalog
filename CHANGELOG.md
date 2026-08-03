@@ -1,3 +1,16 @@
+## [1.2.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.2...v1.2.0) (2026-08-03)
+
+
+
+
+
+# [1.2.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.2...v1.2.0) (2026-08-03)
+
+
+### Features
+
+* added Swagger/OpenAPI docs via drf-spectacular to generate an OpenAPI 3 schema and serve interactive docs at /api/schema/, /api/docs/ (Swagger UI) and /api/redoc/ (Redoc). ([b90ee71](https://github.com/asilvasaraiva/cct-catalog/commit/b90ee71fe18c3da38e6f075774e1e5bf7b8a139c))
+
 ## [1.1.2](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.1...v1.1.2) (2026-08-03)
 
 
