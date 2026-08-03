@@ -1,3 +1,16 @@
+## [1.1.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.0...v1.1.1) (2026-08-03)
+
+
+
+
+
+## [1.1.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.0...v1.1.1) (2026-08-03)
+
+
+### Bug Fixes
+
+* rising the initial delay  seconds for liveness and readiness argocd ([8cb27db](https://github.com/asilvasaraiva/cct-catalog/commit/8cb27dbbdd19c0d4d31b05d4dd246a396b091acd))
+
 ## [1.1.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.0.0...v1.1.0) (2026-08-03)
 
 
