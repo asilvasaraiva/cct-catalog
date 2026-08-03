@@ -1,3 +1,16 @@
+## [1.1.2](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.1...v1.1.2) (2026-08-03)
+
+
+
+
+
+## [1.1.2](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.1...v1.1.2) (2026-08-03)
+
+
+### Bug Fixes
+
+* added  ALLOWED_HOSTS configurable to unblock health probes for argocd readiness access ([9c75be4](https://github.com/asilvasaraiva/cct-catalog/commit/9c75be49129e6c5b14163f39d96bfcdb6b52419a))
+
 ## [1.1.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.0...v1.1.1) (2026-08-03)
 
 
