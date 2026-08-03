@@ -1,3 +1,16 @@
+## [1.1.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.0.0...v1.1.0) (2026-08-03)
+
+
+
+
+
+# [1.1.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.0.0...v1.1.0) (2026-08-03)
+
+
+### Features
+
+* added liveness/readiness health endpoints and wire them into Helm probes ([df2465f](https://github.com/asilvasaraiva/cct-catalog/commit/df2465fc9989b22c0aaf57b37390320bef124e62))
+
 ## 1.0.0 (2026-08-02)
 
 
