@@ -1,3 +1,16 @@
+## [1.2.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.2.0...v1.2.1) (2026-08-03)
+
+
+
+
+
+## [1.2.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.2.0...v1.2.1) (2026-08-03)
+
+
+### Bug Fixes
+
+* override probe Host header to localhost and restore periodSeconds ([e40b1d9](https://github.com/asilvasaraiva/cct-catalog/commit/e40b1d98fe2b58d4b6b8a865684d88c62efc4f54))
+
 ## [1.2.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.1.2...v1.2.0) (2026-08-03)
 
 
