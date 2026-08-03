@@ -151,7 +151,7 @@ SPECTACULAR_SETTINGS = {
         'BootCamp 2026. It supports full CRUD operations over books (create, '
         'list, retrieve, update and delete), backed by PostgreSQL, containerized '
         'with Docker, and deployed to Kubernetes via Helm and ArgoCD.\n\n'
-        'Developed by  Alexsandro S. Saraiva'
+        'Developed by Alexsandro S. Saraiva'
     ),
     'VERSION': '1.0.0',
     'CONTACT': {
