@@ -44,6 +44,9 @@ spec:
             httpGet:
               path: {{ .path }}
               port: http
+              httpHeaders:
+                - name: Host
+                  value: localhost
             initialDelaySeconds: {{ .initialDelaySeconds }}
             periodSeconds: {{ .periodSeconds }}
             timeoutSeconds: {{ .timeoutSeconds }}
@@ -54,6 +57,9 @@ spec:
             httpGet:
               path: {{ .path }}
               port: http
+              httpHeaders:
+                - name: Host
+                  value: localhost
             initialDelaySeconds: {{ .initialDelaySeconds }}
             periodSeconds: {{ .periodSeconds }}
             timeoutSeconds: {{ .timeoutSeconds }}

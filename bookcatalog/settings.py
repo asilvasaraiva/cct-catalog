@@ -138,11 +138,24 @@ STATIC_URL = 'static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'CCT Catalog API',
-    'DESCRIPTION': 'REST API for the book catalog service.',
+    'TITLE': 'CCT Catalog API BootCamp 2026',
+    'DESCRIPTION': (
+        'A REST API for managing a book catalog, built as part of the CCT DevOps '
+        'BootCamp 2026. It supports full CRUD operations over books (create, '
+        'list, retrieve, update and delete), backed by PostgreSQL, containerized '
+        'with Docker, and deployed to Kubernetes via Helm and ArgoCD.'
+    ),
     'VERSION': '1.0.0',
+    'CONTACT': {
+        'name': 'Alexsandro S. Saraiva',
+    },
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
     'SERVE_INCLUDE_SCHEMA': False,
 }
