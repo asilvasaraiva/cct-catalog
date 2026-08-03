@@ -20,6 +20,20 @@ resources:
     cpu: 100m
     memory: 128Mi
 
+probes:
+  liveness:
+    path: /health/live/
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+  readiness:
+    path: /health/ready/
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+
 loadSecretsFrom: books-database-postgresql
 environmentVariables:
   - name: DATABASE_USER
