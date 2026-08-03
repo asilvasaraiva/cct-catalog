@@ -150,7 +150,8 @@ SPECTACULAR_SETTINGS = {
         'A REST API for managing a book catalog, built as part of the CCT DevOps '
         'BootCamp 2026. It supports full CRUD operations over books (create, '
         'list, retrieve, update and delete), backed by PostgreSQL, containerized '
-        'with Docker, and deployed to Kubernetes via Helm and ArgoCD.'
+        'with Docker, and deployed to Kubernetes via Helm and ArgoCD.\n\n'
+        'Developed by  Alexsandro S. Saraiva'
     ),
     'VERSION': '1.0.0',
     'CONTACT': {
