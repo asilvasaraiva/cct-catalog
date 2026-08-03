@@ -1,4 +1,4 @@
-# cct-catalog
+# CCT Books Catalog Api
 
 CCT - DevOps summer course 2026.
 
