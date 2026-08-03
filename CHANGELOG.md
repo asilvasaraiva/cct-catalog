@@ -1,3 +1,21 @@
+## [1.3.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.2.1...v1.3.0) (2026-08-03)
+
+
+
+
+
+# [1.3.0](https://github.com/asilvasaraiva/cct-catalog/compare/v1.2.1...v1.3.0) (2026-08-03)
+
+
+### Bug Fixes
+
+* change Swagger description, Added author credit and commit to generate a new tag and apply into argo ([2ed2cc9](https://github.com/asilvasaraiva/cct-catalog/commit/2ed2cc9fc0988cacd488382fc066a36fc58f6b70))
+
+
+### Features
+
+* **ci:** auto-add Helm chart image tag on release and Added an update-helm-values job that runs after a successful semantic-release + image build, bumping books-catalog-chart/values.yaml's image.tag to the new version and committing it back to main [skip ci]. This keeps the GitOps source of truth (values.yaml) in sync with every published image automatically, so ArgoCD always deploys the latest release instead of a stale pinned tag. ([86faa0c](https://github.com/asilvasaraiva/cct-catalog/commit/86faa0cf5b3b23f8b792407769a55e8376e3d1bc))
+
 ## [1.2.1](https://github.com/asilvasaraiva/cct-catalog/compare/v1.2.0...v1.2.1) (2026-08-03)
 
 
