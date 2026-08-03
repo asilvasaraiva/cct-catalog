@@ -23,14 +23,12 @@ resources:
 probes:
   liveness:
     path: /health/live/
-    initialDelaySeconds: 10
-    periodSeconds: 10
+    initialDelaySeconds: 60
     timeoutSeconds: 3
     failureThreshold: 3
   readiness:
     path: /health/ready/
-    initialDelaySeconds: 5
-    periodSeconds: 10
+    initialDelaySeconds: 60
     timeoutSeconds: 3
     failureThreshold: 3
 
