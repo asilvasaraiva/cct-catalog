@@ -1,4 +1,4 @@
-name: Run Test Suite
+name: Pipeline Steps
 on:
   push:
     branches:
