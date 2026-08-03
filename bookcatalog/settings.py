@@ -21,6 +21,7 @@ DATABASE_NAME = env.str("DATABASE_NAME", "")
 DATABASE_USER = env.str("DATABASE_USER", "")
 DATABASE_PASSWORD = env.str("DATABASE_PASSWORD", "")
 DATABASE_HOST = env.str("DATABASE_HOST", "")
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,9 +32,6 @@ SECRET_KEY = 'django-insecure-n7iq2%wq1*rq=^kj4tc2=vedf(7m6n1n-$4#l&0ah_-8iwy1$x
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
